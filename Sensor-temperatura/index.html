@@ -1,6 +1,33 @@
 <!DOCTYPE html>
-<head>
 
+<head>
+    <script>
+        geotab.addin.myCustomPage1 = () => {
+            console.log("Olá, Mundo! Este é o meu script JavaScript!");
+
+            const button = document.querySelector("input");
+            const paragraph = document.querySelector("p");
+
+            button.addEventListener("click", mostrarFecha);
+
+
+            function mostrarFecha() {
+                console.log("Botao pressionado")
+                document.getElementById('demo').innerHTML = Date();
+            }
+            return {
+                initialize(api, state, callback) {
+                    callback();
+                },
+                focus(api, state) {
+                    // User interface is available
+                },
+                blur(api, state) {
+                    // Save any Add-In state
+                }
+            };
+        };
+    </script>
 </head>
 <html>
 
@@ -10,9 +37,9 @@
 
     <form>
         <input type="button" value="Button1" />
-      </form>
+    </form>
     <p id="demo"></p>
-    <script src="https://github.com/carlosgomessafesoft/Add-in-Geotab/raw/main/Sensor-temperatura/miScript.js"></script> 
+
 </body>
 
 </html>

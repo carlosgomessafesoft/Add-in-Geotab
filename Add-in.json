@@ -1,0 +1,28 @@
+{
+    "name": "Safesoft-trava",
+    "supportEmail": "carlos.gomes@safesoft.com.br",
+    "version": "0.1",
+    "items": [
+        {
+            "path": "ActivityLink",
+            "menuId": "SafesoftSubmenuContainer",
+            "menuName": {"en": "Safesoft"},
+            "icon": "https://raw.githubusercontent.com/carlosgomessafesoft/Add-in-Geotab/067d03a23d60633da41fa719729f47954f86e169/Image/Logo_S_vetorial.svg"            
+        },
+        [
+            {
+                "url": "https://raw.githubusercontent.com/carlosgomessafesoft/Add-in-Geotab/main/Trava-bau/index.html",
+                "path": "SafesoftSubmenuContainer/",
+                "menuName": {"en": "Trava Baú"},
+                "svgIcon": "https://raw.githubusercontent.com/carlosgomessafesoft/Add-in-Geotab/9a95cfa8dd516da6fab5cd406154289e74e3cbc9/Trava-bau/image/lock-svgrepo-com.svg"
+            },
+            {
+                "url": "https://raw.githubusercontent.com/carlosgomessafesoft/Add-in-Geotab/main/Sensor-temperatura/index.html",
+                "path": "SafesoftSubmenuContainer/",
+                "menuName": {"en": "Digital Temperature Sensor"},
+                "svgIcon": "https://raw.githubusercontent.com/carlosgomessafesoft/Add-in-Geotab/067d03a23d60633da41fa719729f47954f86e169/Sensor-temperatura/image/temperature-low-svgrepo-com.svg"
+            }
+        ]        
+    ],
+    "isSigned": false
+}

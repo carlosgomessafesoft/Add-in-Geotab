@@ -1,0 +1,17 @@
+{
+	"name": "Safesoft-temperatura",
+	"supportEmail": "carlos.gomes@safesoft.com.br",
+	"version": "0.1",
+	"items": [
+		{
+			"url": "https://raw.githubusercontent.com/carlosgomessafesoft/Add-in-Geotab/main/Sensor-temperatura/index.html",
+			"path": "EngineMaintenanceLink/",
+			"menuName": {
+				"en": "Digital Temperature Sensor",
+                "pt-BR": "Sensor Digital de temperatura"
+			},
+			"svgIcon": "https://raw.githubusercontent.com/carlosgomessafesoft/Add-in-Geotab/067d03a23d60633da41fa719729f47954f86e169/Sensor-temperatura/image/temperature-low-svgrepo-com.svg"
+		}
+	],
+	"isSigned": false
+}

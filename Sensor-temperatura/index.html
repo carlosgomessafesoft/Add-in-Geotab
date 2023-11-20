@@ -1,40 +1,14 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <title>Sensor de temperatura</title>
-    <script>
-        geotab.addin.myCustomPage1 = () => {
-            // Initialize required Add-In variables
-            // Example:
-            var element = document.getElementById("myButton");
-            if (element) {
-                element.addEventListener("click", function (event) {
-                    event.preventDefault();
-                    alert("Action performed");
-                });
-            }
-            return {
-                initialize(api, state, callback) {
-                    callback();
-                },
-                focus(api, state) {
-                    // User interface is available
-                },
-                blur(api, state) {
-                    // Save any Add-In state
-                }
-            };
-        };
-    </script>
-</head>
-
 <body>
 
-    <h1>Sensor de temperatura</h1>
-    <p>Sensor de temperatura</p>
-    <button id="myButton">Do Action</button>
+<h2>Mi primera página web con JavaScript</h2>
+
+<button type="button" onclick="mostrarFecha()">Haz clic para mostrar la fecha y hora.</button>
+
+<p id="demo"></p>
+
+<script src="miScript.js"></script>
 
 </body>
-
 </html>

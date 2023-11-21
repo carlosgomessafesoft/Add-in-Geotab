@@ -14,6 +14,7 @@
     <link href="CSS\main.css" rel="stylesheet" type="text/css" />
     <!-- Materialize icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
 </head>
 <html>
 
@@ -57,28 +58,6 @@
         </div>
     <!-- JavaScript file containing the api functionality -->
     <script src="https://cdn.jsdelivr.net/gh/carlosgomessafesoft/Add-in-Geotab@main/Sensor-temperatura/js/api.js"></script>
-    <!-- The JavaScript used for the example is present in the same HTML file here -->
-    <script type="text/javascript">
-        document.addEventListener("DOMContentLoaded", function () {
-            document.getElementById("submit").addEventListener("click", function (event) {
-                event.preventDefault();
-                console.log("botão pressionado")
-                // api.multiCall (
-                //     [
-                //         ["Get", {"typeName": "Group", "search":{"name":"SensorTemperatura"}}],
-                //         ["Get", {"typeName": "Group",  "resultsLimit": 10}]
-                //     ],
-                //     function (result) {
-                //         if (result) {
-                //             document.getElementById("vehicleCount").innerHTML = result[0];
-                //             document.getElementById("userCount").innerHTML = result[1];
-                //         }
-                //     }, function (error) {
-                //         alert(error);
-                // });
-            });
-        });
-    </script>
 
 </body>
 

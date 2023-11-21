@@ -4,15 +4,15 @@
 
     <script>
         geotab.addin.myCustomPage1 = () => {
-            // Initialize required Add-In variables
-            // Example:
-            // var element = document.getElementById("myButton");
-            // if (element) {
-            //     element.addEventListener("click", function (event) {
-            //         event.preventDefault();
-            //         alert("Action performed");
-            //     });
-            // }
+            //Initialize required Add-In variables
+            //Example:
+            var element = document.getElementById("myButton");
+            if (element) {
+                element.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    alert("Action performed");
+                });
+            }
             return {
                 initialize(api, state, callback) {
                     callback();
@@ -52,7 +52,7 @@
 
     <fieldset>
         <form>
-            <input type="button" value="Last Temperature" id="ButtonLastTemperature" />
+            <input type="button" value="Last Temperature" id="ButtonLastTemperature"  id="myButton"/>
             <input type="button" value="Temperature graph" id="ButtonTemperaturegraph" />
         </form>
     </fieldset>

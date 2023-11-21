@@ -14,6 +14,7 @@
     <body>
 
         <header>
+            <div class="sign-in-header">
             <nav>
                 <!-- MyGeotab SDK Logo -->
                 <a href="https://safesoft.com.br/en/home-us/" target="_blank">
@@ -25,6 +26,7 @@
                 <!-- Sign out button using the CSS class "primary-btn" to apply the primary button stylings -->
                 <button class="primary-btn sign-out-btn" id="signout">Sign out</button>
             </nav>
+        </div>
         </header>
 
         <div class="container">
@@ -57,19 +59,19 @@
             document.getElementById("submit").addEventListener("click", function (event) {
                 event.preventDefault();
                 console.log("botão pressionado")
-                api.multiCall (
-                    [
-                        ["Get", {"typeName": "Group", "search":{"name":"SensorTemperatura"}}],
-                        ["Get", {"typeName": "Group",  "resultsLimit": 10}]
-                    ],
-                    function (result) {
-                        if (result) {
-                            document.getElementById("vehicleCount").innerHTML = result[0];
-                            document.getElementById("userCount").innerHTML = result[1];
-                        }
-                    }, function (error) {
-                        alert(error);
-                });
+                // api.multiCall (
+                //     [
+                //         ["Get", {"typeName": "Group", "search":{"name":"SensorTemperatura"}}],
+                //         ["Get", {"typeName": "Group",  "resultsLimit": 10}]
+                //     ],
+                //     function (result) {
+                //         if (result) {
+                //             document.getElementById("vehicleCount").innerHTML = result[0];
+                //             document.getElementById("userCount").innerHTML = result[1];
+                //         }
+                //     }, function (error) {
+                //         alert(error);
+                // });
             });
         });
     </script>

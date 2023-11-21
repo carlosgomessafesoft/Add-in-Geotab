@@ -1,4 +1,4 @@
-geotab.addin.myCustomPage1 = () => {
+
     console.log("Carregou o script");
 
     const button = document.querySelector("input");
@@ -24,4 +24,3 @@ geotab.addin.myCustomPage1 = () => {
             console.log("blur")
         }
     };
-};

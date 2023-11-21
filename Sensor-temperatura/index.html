@@ -1,20 +1,40 @@
 <!DOCTYPE html>
 
-<head>
-    <script src="https://cdn.jsdelivr.net/gh/carlosgomessafesoft/Add-in-Geotab@main/Sensor-temperatura/myScript.js">
-    </script>
-</head>
+<head></head>
 <html>
 
-<body>
+    <body>
+        <div>
+            <img src="https://raw.githubusercontent.com/carlosgomessafesoft/Add-in-Geotab/main/Image/Logo_S_vetorial.svg"
+                width="40" height="40">
+            <h1>Temperature sensor Safesoft</h1>
+        </div>
 
-    <h1>My First JavaScript testew</h1>
 
-    <form>
-        <input type="button" value="Button1" />
-    </form>
-    <p id="demo"></p>
+        <fieldset class="geotabFieldset">
+            <div class="geotabField"><label>Select Vehicle:</label> <select v-model="selected" @changed="deviceChanged()"
+                    class="geotabFormEditField">
+                    <option v-for="device in devices" v-bind:value="device.id">{{ device.name }}</option>
+                </select></div>
+        </fieldset>
 
-</body>
+        <br>
+
+        <fieldset>
+            <form>
+                <input type="button" value="Last Temperature" id="ButtonLastTemperature" />
+                <input type="button" value="Temperature graph" id="ButtonTemperaturegraph" />
+            </form>
+        </fieldset>
+        <br>
+        <fieldset>
+            <input type="button" value="Sensor 1" id="ButtonSensor1" />
+            <input type="button" value="Sensor 2" id="ButtonSensor2" />
+            <input type="button" value="Sensor 3" id="ButtonSensor3" />
+            <p id="demo"> </p>
+        </fieldset>
+
+
+    </body>
 
 </html>

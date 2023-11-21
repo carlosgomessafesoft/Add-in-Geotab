@@ -1,5 +1,5 @@
 "use strict";
-geotab.addin.myCustomPage1 = () => {
+
     document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("submit").addEventListener("click", function (event) {
             event.preventDefault();
@@ -19,16 +19,3 @@ geotab.addin.myCustomPage1 = () => {
             // });
         });
     });
-
-    return {
-        initialize(api, state, callback) {
-            callback();
-        },
-        focus(api, state) {
-            // User interface is available
-        },
-        blur(api, state) {
-            // Save any Add-In state
-        }
-    };
-};

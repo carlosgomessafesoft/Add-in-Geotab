@@ -4,7 +4,7 @@ body {
     margin: 020 ;
     font-family: Arial;
 }
-
+/* 
 a, a:visited {
     text-decoration: none;
     color: #0078D3;
@@ -202,12 +202,12 @@ table tbody tr:nth-child(even) {
     background-color: white;
     border-radius: 8px;
 }
-
+*/
 .sign-in-header {
     font-family: 'Roboto', sans-serif;
     text-align: center;
 }
-
+/*
 .sign-in-header h1 {
     font-weight: 500;
     color: #0078D3;
@@ -416,7 +416,7 @@ nav h1 {
 .skill-tooltip:hover .skill-text {
     visibility: visible;
 }
-
+*/
 .primary-btn {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -430,7 +430,7 @@ nav h1 {
     cursor: pointer;
     margin-top: 1rem;
 }
-
+/*
 .secondary-btn {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -451,13 +451,13 @@ nav h1 {
     margin-bottom: 3rem;
     border-radius: 8px;
 }
-
+*/
 .sign-out-btn {
     float: right;
     text-align: right;
     margin-right: 2rem;
 }
-
+/*
 .template-btn {
     float: right;
     text-align: right;
@@ -515,13 +515,13 @@ p {
 .highlight {
     background-color: #fcf8e3;
 }
-
+*/
 .container {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     margin-bottom: 1rem;
 }
-
+/*
 
 .example-header {
     display: grid;
@@ -640,14 +640,14 @@ p {
 .spaced {
     margin-top: 5rem;
 }
-
+*/
 .padded {
     padding-top: 10px;
     padding-right: 50px;
     padding-bottom: 50px;
     padding-left: 80px;
 }
-
+/*
 .invisible {
     display: none;
 }
@@ -793,4 +793,4 @@ p {
 
 .importDevices-result *{
     margin: 0;
-}
+} */

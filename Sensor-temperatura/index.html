@@ -1,70 +1,83 @@
 <!DOCTYPE html>
 
 <head>
-
-    <script>
-        geotab.addin.myCustomPage1 = () => {
-            // Initialize required Add-In variables
-            // Example:
-            // var element = document.getElementById("myButton");
-            // if (element) {
-            //     element.addEventListener("click", function (event) {
-            //         event.preventDefault();
-            //         alert("Action performed");
-            //     });
-            // }
-            return {
-                initialize(api, state, callback) {
-                    callback();
-                    console.log("initialize")
-                },
-                focus(api, state) {
-                    // User interface is available
-                    console.log("focus")
-                },
-                blur(api, state) {
-                    // Save any Add-In state
-                    console.log("blur")
-                }
-            };
-        };
-    </script>
-
+    <meta charset="utf-8" />
+    <title>Geotab SDK | Get Count of Vehicles & Users</title>
+    <link rel="icon" href="../../favicon.ico">
+    <!-- Updated CSS file to reflect the UI refresh -->
+    <link href="CSS\main.css" rel="stylesheet" type="text/css" />
+    <!-- Materialize icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <html>
 
-<body>
-    <div>
-        <img src="https://github.com/carlosgomessafesoft/Add-in-Geotab/blob/main/Image/Logotipo_Safesoft_trademark_Prancheta%202.png?raw=true"
-            width="221" height="60">
-        <h1>Temperature sensor Safesoft</h1>
-    </div>
+    <body>
+
+        <header>
+            <nav>
+                <!-- MyGeotab SDK Logo -->
+                <a href="https://safesoft.com.br/en/home-us/" target="_blank">
+                    <img src="https://github.com/carlosgomessafesoft/Add-in-Geotab/blob/main/Image/Logotipo_Safesoft_trademark_Prancheta%202.png?raw=true"
+                        width="221" height="60" alt="">
+    
+                    <h1>Sensor de Temperatura</h1>
+                </a>
 
 
-    <fieldset class="geotabFieldset">
-        <div class="geotabField"><label>Select Vehicle:</label> <select v-model="selected" @changed="deviceChanged()"
-                class="geotabFormEditField">
-                <option v-for="device in devices" v-bind:value="device.id">{{ device.name }}</option>
-            </select></div>
-    </fieldset>
+                <!-- Sign out button using the CSS class "primary-btn" to apply the primary button stylings -->
+                <button class="primary-btn sign-out-btn" id="signout">Sign out</button>
+            </nav>
+        </header>
 
-    <br>
+        <div class="container">
+            <!-- Div used to append the sign in components too, created within loginUpdated.js -->
+            <div id="signin-content"></div>
 
-    <fieldset>
-        <form>
-            <input type="button" value="Last Temperature" id="ButtonLastTemperature" />
-            <input type="button" value="Temperature graph" id="ButtonTemperaturegraph" />
-        </form>
-    </fieldset>
-    <br>
-    <fieldset>
-        <input type="button" value="Sensor 1" id="ButtonSensor1" />
-        <input type="button" value="Sensor 2" id="ButtonSensor2" />
-        <input type="button" value="Sensor 3" id="ButtonSensor3" />
-        <p id="demo"> </p>
-    </fieldset>
+            <!-- Components which make up the example are placed here -->
+            <div id="example-content" class="padded">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Total Vehicles</th>
+                            <th>Total Users</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td><span id="vehicleCount">Not Determined Yet</span></td>
+                        <td><span id="userCount">Not Determined Yet</span></td>
+                    </tr>
+                </table>
+
+                <button class="primary-btn" id="submit">Get count</button>
+            </div>
+        </div>
 
 
-</body>
+
+        <!-- JavaScript file containing the api functionality -->
+        <script src="js/api.js"></script>
+        <!-- The JavaScript used for the example is present in the same HTML file here -->
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", function () {
+                document.getElementById("submit").addEventListener("click", function (event) {
+                    event.preventDefault();
+
+                    api.multiCall(
+                        [
+                            ["GetCountOf", { "typeName": "Group", "resultsLimit": 10 }],
+                            //["GetCountOf", { "typeName": "User" }]
+                        ],
+                        function (result) {
+                            if (result) {
+                                document.getElementById("vehicleCount").innerHTML = result[0];
+                                document.getElementById("userCount").innerHTML = result[1];
+                            }
+                        }, function (error) {
+                            alert(error);
+                        });
+                });
+            });
+        </script>
+    </body>
 
 </html>

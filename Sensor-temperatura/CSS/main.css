@@ -10,7 +10,7 @@ body {
     text-align: center;
 }
 
-.primary-btn {
+/* .primary-btn {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 15px;
@@ -22,7 +22,7 @@ body {
     letter-spacing: 0.32px;
     cursor: pointer;
     margin-top: 1rem;
-}
+} */
 
 .sign-out-btn {
     float: right;

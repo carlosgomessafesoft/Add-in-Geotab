@@ -8,8 +8,6 @@
     <link href="CSS\main.css" rel="stylesheet" type="text/css" />
     <!-- Materialize icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-
 </head>
 <html>
 
@@ -21,11 +19,8 @@
                 <a href="https://safesoft.com.br/en/home-us/" target="_blank">
                     <img src="https://github.com/carlosgomessafesoft/Add-in-Geotab/blob/main/Image/Logotipo_Safesoft_trademark_Prancheta%202.png?raw=true"
                         width="221" height="60" alt="">
-    
-                    <h1>Sensor de Temperatura</h1>
                 </a>
-
-
+                <h1 id = "title">Sensor de Temperatura</h1>
                 <!-- Sign out button using the CSS class "primary-btn" to apply the primary button stylings -->
                 <button class="primary-btn sign-out-btn" id="signout">Sign out</button>
             </nav>
@@ -50,11 +45,33 @@
                     </tr>
                 </table>
 
-                <button class="primary-btn" id="submit">Get count</button>
+                <button class="primary-btn" id="submit" onclick="">Get count</button>
             </div>
         </div>
+    <!-- JavaScript file containing the api functionality -->
+    <script src="js/api.js"></script>
+    <!-- The JavaScript used for the example is present in the same HTML file here -->
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("submit").addEventListener("click", function (event) {
+                event.preventDefault();
 
-
+                api.multiCall (
+                    [
+                        ["Get", {"typeName": "Group", "search":{"name":"SensorTemperatura"}}],
+                        ["Get", {"typeName": "Group",  "resultsLimit": 10}]
+                    ],
+                    function (result) {
+                        if (result) {
+                            document.getElementById("vehicleCount").innerHTML = result[0];
+                            document.getElementById("userCount").innerHTML = result[1];
+                        }
+                    }, function (error) {
+                        alert(error);
+                });
+            });
+        });
+    </script>
 
 </body>
 

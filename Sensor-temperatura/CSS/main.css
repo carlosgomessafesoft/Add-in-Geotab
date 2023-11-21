@@ -10,7 +10,7 @@ body {
     text-align: center;
 }
 
-/* .primary-btn {
+.primary-btn {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 15px;
@@ -22,7 +22,7 @@ body {
     letter-spacing: 0.32px;
     cursor: pointer;
     margin-top: 1rem;
-} */
+} 
 
 .sign-out-btn {
     float: right;
@@ -42,8 +42,7 @@ body {
     padding-bottom: 50px;
     padding-left: 80px;
 }
-/*---------------------------------------------------*/
-/* 
+/*
 a, a:visited {
     text-decoration: none;
     color: #0078D3;
@@ -71,7 +70,6 @@ h1, h2, h3, h4, h5 {
 ol > li {
     margin-bottom: 20px;
 }
-
 ol ul {
     margin-top: 10px;
 }
@@ -93,6 +91,7 @@ label {
     color: #202328;
     padding-bottom: 0.5rem;
 }
+
 
 input[type="text"], input[type="password"]  {
     font-family: 'Roboto', sans-serif;
@@ -471,9 +470,9 @@ nav h1 {
     margin-bottom: 3rem;
     border-radius: 8px;
 }
-*/
 
-/*
+
+
 .template-btn {
     float: right;
     text-align: right;
@@ -796,4 +795,5 @@ p {
 
 .importDevices-result *{
     margin: 0;
-} */
+}
+*/

@@ -1,40 +1,70 @@
 <!DOCTYPE html>
 
-<head></head>
+<head>
+
+    <script>
+        geotab.addin.myCustomPage1 = () => {
+            // Initialize required Add-In variables
+            // Example:
+            // var element = document.getElementById("myButton");
+            // if (element) {
+            //     element.addEventListener("click", function (event) {
+            //         event.preventDefault();
+            //         alert("Action performed");
+            //     });
+            // }
+            return {
+                initialize(api, state, callback) {
+                    callback();
+                    console.log("initialize")
+                },
+                focus(api, state) {
+                    // User interface is available
+                    console.log("focus")
+                },
+                blur(api, state) {
+                    // Save any Add-In state
+                    console.log("blur")
+                }
+            };
+        };
+    </script>
+
+</head>
 <html>
 
-    <body>
-        <div>
-            <img src="https://github.com/carlosgomessafesoft/Add-in-Geotab/blob/main/Image/Logotipo_Safesoft_trademark_Prancheta%202.png?raw=true"
-                width="221" height="60">
-            <h1>Temperature sensor Safesoft</h1>
-        </div>
+<body>
+    <div>
+        <img src="https://github.com/carlosgomessafesoft/Add-in-Geotab/blob/main/Image/Logotipo_Safesoft_trademark_Prancheta%202.png?raw=true"
+            width="221" height="60">
+        <h1>Temperature sensor Safesoft</h1>
+    </div>
 
 
-        <fieldset class="geotabFieldset">
-            <div class="geotabField"><label>Select Vehicle:</label> <select v-model="selected" @changed="deviceChanged()"
-                    class="geotabFormEditField">
-                    <option v-for="device in devices" v-bind:value="device.id">{{ device.name }}</option>
-                </select></div>
-        </fieldset>
+    <fieldset class="geotabFieldset">
+        <div class="geotabField"><label>Select Vehicle:</label> <select v-model="selected" @changed="deviceChanged()"
+                class="geotabFormEditField">
+                <option v-for="device in devices" v-bind:value="device.id">{{ device.name }}</option>
+            </select></div>
+    </fieldset>
 
-        <br>
+    <br>
 
-        <fieldset>
-            <form>
-                <input type="button" value="Last Temperature" id="ButtonLastTemperature" />
-                <input type="button" value="Temperature graph" id="ButtonTemperaturegraph" />
-            </form>
-        </fieldset>
-        <br>
-        <fieldset>
-            <input type="button" value="Sensor 1" id="ButtonSensor1" />
-            <input type="button" value="Sensor 2" id="ButtonSensor2" />
-            <input type="button" value="Sensor 3" id="ButtonSensor3" />
-            <p id="demo"> </p>
-        </fieldset>
+    <fieldset>
+        <form>
+            <input type="button" value="Last Temperature" id="ButtonLastTemperature" />
+            <input type="button" value="Temperature graph" id="ButtonTemperaturegraph" />
+        </form>
+    </fieldset>
+    <br>
+    <fieldset>
+        <input type="button" value="Sensor 1" id="ButtonSensor1" />
+        <input type="button" value="Sensor 2" id="ButtonSensor2" />
+        <input type="button" value="Sensor 3" id="ButtonSensor3" />
+        <p id="demo"> </p>
+    </fieldset>
 
 
-    </body>
+</body>
 
 </html>

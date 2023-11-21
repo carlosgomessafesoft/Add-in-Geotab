@@ -4,6 +4,45 @@ body {
     margin: 020 ;
     font-family: Arial;
 }
+
+.sign-in-header {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+.primary-btn {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    padding: 10px 20px; 
+    background: #0078D3;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    letter-spacing: 0.32px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.sign-out-btn {
+    float: right;
+    text-align: right;
+    margin-right: 2rem;
+}
+
+.container {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    margin-bottom: 1rem;
+}
+
+.padded {
+    padding-top: 10px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+}
+/*---------------------------------------------------*/
 /* 
 a, a:visited {
     text-decoration: none;
@@ -202,12 +241,7 @@ table tbody tr:nth-child(even) {
     background-color: white;
     border-radius: 8px;
 }
-*/
-.sign-in-header {
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-}
-/*
+
 .sign-in-header h1 {
     font-weight: 500;
     color: #0078D3;
@@ -416,21 +450,7 @@ nav h1 {
 .skill-tooltip:hover .skill-text {
     visibility: visible;
 }
-*/
-.primary-btn {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 15px;
-    padding: 10px 20px; 
-    background: #0078D3;
-    border: none;
-    border-radius: 4px;
-    color: white;
-    letter-spacing: 0.32px;
-    cursor: pointer;
-    margin-top: 1rem;
-}
-/*
+
 .secondary-btn {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -452,11 +472,7 @@ nav h1 {
     border-radius: 8px;
 }
 */
-.sign-out-btn {
-    float: right;
-    text-align: right;
-    margin-right: 2rem;
-}
+
 /*
 .template-btn {
     float: right;
@@ -515,13 +531,7 @@ p {
 .highlight {
     background-color: #fcf8e3;
 }
-*/
-.container {
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    margin-bottom: 1rem;
-}
-/*
+
 
 .example-header {
     display: grid;
@@ -640,14 +650,7 @@ p {
 .spaced {
     margin-top: 5rem;
 }
-*/
-.padded {
-    padding-top: 10px;
-    padding-right: 50px;
-    padding-bottom: 50px;
-    padding-left: 80px;
-}
-/*
+
 .invisible {
     display: none;
 }

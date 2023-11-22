@@ -20,7 +20,7 @@
                         <img src="https://cdn.jsdelivr.net/gh/carlosgomessafesoft/Add-in-Geotab@main/Image/Logotipo_Safesoft_trademark_Prancheta%202.png?raw=true"
                             width="221" height="60" alt="">
                     </a>
-                    <h1 id="title">Temperature sensor v0.1</h1>
+                    <h1 id="title">Temperature sensor v0.2</h1>
 
                 </nav>
             </div>
@@ -75,6 +75,19 @@
         let button = document.querySelector('#submit');
         button.addEventListener('click', () => {
             console.log("teste");
+            api.call("Get", {
+    "typeName": "Group", 
+}, function(result) 
+{
+    console.log("Done: ", result);
+    var i
+    for (i = 0; i < result.length; i++)
+    {
+        console.log(result[i]["name"])
+    }
+}, 
+    function(e) {console.error("Failed:", e);}
+);
         })
 
     </script>

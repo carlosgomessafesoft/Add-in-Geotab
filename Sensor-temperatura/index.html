@@ -20,7 +20,7 @@
                         <img src="https://cdn.jsdelivr.net/gh/carlosgomessafesoft/Add-in-Geotab@main/Image/Logotipo_Safesoft_trademark_Prancheta%202.png?raw=true"
                             width="221" height="60" alt="">
                     </a>
-                    <h1 id="title">Temperature sensor v0.0</h1>
+                    <h1 id="title">Temperature sensor v0.1</h1>
 
                 </nav>
             </div>
@@ -51,13 +51,34 @@
     </div>
     <!-- JavaScript file containing the api functionality -->
     <script>
+        geotab.addin.SensorTemperatura = () => {
+            function buttonPressed() {
+                console.log("Botão pressionado")
+            }
+
+            return {
+                initialize(api, state, callback) {
+                    callback();
+                    console.log("Inicialização da pagina")
+                },
+                focus(api, state) {
+                    // User interface is available
+                    console.log("focus")
+                },
+                blur(api, state) {
+                    // Save any Add-In state
+                    console.log("blur")
+                }
+            };
+        };
+
         let button = document.querySelector('#submit');
-        button.addEventListener('click', ()=>{
-        console.log("teste");
+        button.addEventListener('click', () => {
+            console.log("teste");
         })
 
-      </script>       
-      
+    </script>
+
 </body>
 
 </html>

@@ -20,7 +20,7 @@
                         <img src="https://cdn.jsdelivr.net/gh/carlosgomessafesoft/Add-in-Geotab@main/Image/Logotipo_Safesoft_trademark_Prancheta%202.png?raw=true"
                             width="221" height="60" alt="">
                     </a>
-                    <h1 id="title">Temperature sensor</h1>
+                    <h1 id="title">Temperature sensor v0.0</h1>
 
                 </nav>
             </div>
@@ -45,26 +45,19 @@
                     </tr>
                 </table>
 
-                <button class="primary-btn" id="submit" onclick=buttonPressed()>Get count</button>
+                <button class="primary-btn" id="submit">Get count</button>
             </div>
         </div>
     </div>
     <!-- JavaScript file containing the api functionality -->
     <script>
-        const btn = document.querySelector("submit");
+        let button = document.querySelector('#submit');
+        button.addEventListener('click', ()=>{
+        console.log("teste");
+        })
 
-        btn.addEventListener("click", function () {
-            console.log("Botão pressionado");
-        });
-
-        function buttonPressed() {
-            console.log("Botão pressionado")
-        }            
-    </script>
-    <script
-        src="https://cdn.jsdelivr.net/gh/carlosgomessafesoft/Add-in-Geotab@main/Sensor-temperatura/js/api.js"></script>
-    <script
-        src="https://cdn.jsdelivr.net/gh/carlosgomessafesoft/Add-in-Geotab@cbd5d1f2f03656b34950c3c4d1c698d68dfa6c8d/Sensor-temperatura/scripts/main.js"></script>
+      </script>       
+      
 </body>
 
 </html>

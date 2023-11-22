@@ -1,11 +1,9 @@
 "use strict";
 geotab.addin.SensorTemperatura = () => {
-    document.addEventListener("DOMContentLoaded", function () {
-        document.getElementById("submit").addEventListener("click", function (event) {
-            event.preventDefault();
-            console.log("botão pressionado")
-        });
-    });
+    function buttonPressed()
+    {
+        console.log("Botão pressionado")
+    }
     
     return {
         initialize(api, state, callback) {
